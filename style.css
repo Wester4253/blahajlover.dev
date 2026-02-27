@@ -1,0 +1,514 @@
+/* ====================================================
+   BLAHAJLOVER.DEV — THE OFFICIAL BLAHAJ SHRINE 🦈
+   Trans flag colors: #55CDFC (blue) #F7A8B8 (pink) #FFFFFF (white)
+   ==================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --trans-blue:  #55CDFC;
+  --trans-pink:  #F7A8B8;
+  --trans-white: #FFFFFF;
+  --dark-bg:     #1a0a2e;
+  --card-bg:     #2a1050;
+  --comic: "Comic Sans MS", "Comic Neue", "Comic Sans", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--comic);
+  background-color: var(--dark-bg);
+  color: var(--trans-white);
+  overflow-x: hidden;
+}
+
+/* ---- TRANS FLAG STRIPE BANNER ---- */
+.trans-stripe-top,
+.trans-stripe-bottom {
+  width: 100%;
+  height: 18px;
+  display: flex;
+}
+.trans-stripe-top .s1, .trans-stripe-bottom .s1 { flex: 1; background: var(--trans-blue);  }
+.trans-stripe-top .s2, .trans-stripe-bottom .s2 { flex: 1; background: var(--trans-pink);  }
+.trans-stripe-top .s3, .trans-stripe-bottom .s3 { flex: 1; background: var(--trans-white); }
+.trans-stripe-top .s4, .trans-stripe-bottom .s4 { flex: 1; background: var(--trans-pink);  }
+.trans-stripe-top .s5, .trans-stripe-bottom .s5 { flex: 1; background: var(--trans-blue);  }
+
+/* ---- HEADER ---- */
+header {
+  background: linear-gradient(
+    180deg,
+    var(--trans-blue)  0%,
+    var(--trans-pink)  30%,
+    var(--trans-white) 50%,
+    var(--trans-pink)  70%,
+    var(--trans-blue)  100%
+  );
+  text-align: center;
+  padding: 50px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  opacity: 0.25;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+header::after {
+  content: "🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈🦈";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  opacity: 0.25;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.site-title {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--dark-bg);
+  text-shadow:
+    4px 4px 0 var(--trans-blue),
+    8px 8px 0 var(--trans-pink);
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.site-subtitle {
+  font-size: clamp(1rem, 3vw, 1.7rem);
+  color: var(--dark-bg);
+  margin-top: 12px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--trans-white);
+}
+
+.header-shark {
+  font-size: clamp(4rem, 12vw, 9rem);
+  display: block;
+  margin: 16px auto;
+  animation: wobble 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(85,205,252,0.7));
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-5deg) scale(1);   }
+  50%       { transform: rotate(5deg)  scale(1.08); }
+}
+
+.pride-badge {
+  display: inline-block;
+  background: var(--dark-bg);
+  color: var(--trans-pink);
+  border: 3px solid var(--trans-blue);
+  border-radius: 50px;
+  padding: 6px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 14px;
+  letter-spacing: 1px;
+}
+
+/* ---- NAV ---- */
+nav {
+  background: var(--card-bg);
+  border-top: 4px solid var(--trans-blue);
+  border-bottom: 4px solid var(--trans-pink);
+  padding: 12px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--trans-blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+nav a:hover {
+  background: var(--trans-pink);
+  color: var(--dark-bg);
+}
+
+/* ---- MAIN CONTENT ---- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--trans-pink);
+  text-shadow: 3px 3px 0 var(--trans-blue);
+  letter-spacing: 1px;
+}
+
+/* ---- INTRO BOX ---- */
+.intro-box {
+  background: linear-gradient(135deg, var(--trans-blue) 0%, var(--trans-pink) 50%, var(--trans-blue) 100%);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: var(--dark-bg);
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.7;
+  border: 4px dashed var(--trans-white);
+  box-shadow: 0 0 30px rgba(247,168,184,0.4);
+}
+
+.intro-box .big-shark {
+  font-size: 3rem;
+  display: block;
+  margin: 10px 0;
+}
+
+/* ---- GALLERY ---- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid var(--trans-blue);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px) rotate(1deg);
+  border-color: var(--trans-pink);
+  box-shadow: 0 10px 30px rgba(85,205,252,0.3);
+}
+
+.gallery-card:nth-child(even):hover {
+  transform: translateY(-6px) rotate(-1deg);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card .card-caption {
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--trans-white);
+  text-align: center;
+  background: var(--card-bg);
+}
+
+.gallery-card .emoji-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.8rem;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* emoji-art card (no real image) */
+.emoji-art-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 3px solid var(--trans-pink);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+}
+
+.emoji-art-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 30px rgba(247,168,184,0.35);
+}
+
+.emoji-art-card .emoji-big {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 10px;
+  animation: spin-emoji 3s linear infinite;
+}
+
+@keyframes spin-emoji {
+  0%   { transform: rotate(0deg);   }
+  25%  { transform: rotate(-10deg); }
+  75%  { transform: rotate(10deg);  }
+  100% { transform: rotate(0deg);   }
+}
+
+.emoji-art-card .emoji-caption {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--trans-pink);
+  line-height: 1.4;
+}
+
+/* ---- MEME CARDS ---- */
+.meme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.meme-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 28px 22px;
+  border-left: 8px solid var(--trans-blue);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.meme-card:nth-child(2n)   { border-left-color: var(--trans-pink);  }
+.meme-card:nth-child(3n)   { border-left-color: var(--trans-white); }
+
+.meme-card:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+.meme-card .top-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--trans-white);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 8px;
+}
+
+.meme-card .bottom-text {
+  font-size: 1.1rem;
+  color: var(--trans-pink);
+  font-style: italic;
+}
+
+.meme-card .meme-icon {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 2.2rem;
+}
+
+/* ---- FACTS SECTION ---- */
+.facts-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.facts-list li {
+  background: var(--card-bg);
+  border: 3px solid var(--trans-blue);
+  border-radius: 14px;
+  padding: 18px 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 50px;
+}
+
+.facts-list li::before {
+  content: "🦈";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+}
+
+.facts-list li strong {
+  color: var(--trans-pink);
+}
+
+/* ---- COUNTER ---- */
+.counter-box {
+  text-align: center;
+  background: linear-gradient(135deg, var(--trans-pink), var(--trans-blue));
+  border-radius: 20px;
+  padding: 40px 20px;
+  color: var(--dark-bg);
+}
+
+.counter-number {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  display: block;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  animation: pulse-count 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-count {
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.06); }
+}
+
+.counter-label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ---- MARQUEE ---- */
+.marquee-wrapper {
+  overflow: hidden;
+  background: var(--trans-pink);
+  padding: 10px 0;
+  border-top: 4px solid var(--trans-blue);
+  border-bottom: 4px solid var(--trans-blue);
+  margin-bottom: 70px;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-block;
+  animation: scroll-left 22s linear infinite;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--dark-bg);
+  padding: 0 40px;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(100vw);  }
+  to   { transform: translateX(-100%); }
+}
+
+/* ---- PLEDGE ---- */
+.pledge-box {
+  background: var(--card-bg);
+  border: 5px dashed var(--trans-pink);
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--trans-white);
+}
+
+.pledge-box .pledge-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--trans-pink);
+  text-shadow: 3px 3px 0 var(--trans-blue);
+  margin-bottom: 20px;
+}
+
+.pledge-box em {
+  color: var(--trans-blue);
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background: var(--card-bg);
+  border-top: 6px solid var(--trans-blue);
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--trans-white);
+  font-size: 1rem;
+}
+
+footer .footer-shark {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: var(--trans-blue);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--trans-pink);
+}
+
+/* ---- RAINBOW TEXT UTILITY ---- */
+.rainbow-text {
+  background: linear-gradient(90deg,
+    var(--trans-blue), var(--trans-pink), var(--trans-white),
+    var(--trans-pink), var(--trans-blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: rainbow-shift 3s linear infinite;
+}
+
+@keyframes rainbow-shift {
+  from { background-position: 0%   center; }
+  to   { background-position: 200% center; }
+}
+
+/* ---- SPINNING BADGE ---- */
+.spinning-badge {
+  display: inline-block;
+  animation: spin-badge 6s linear infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes spin-badge {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  nav a {
+    font-size: 0.9rem;
+    margin: 0 6px;
+    padding: 4px 8px;
+  }
+  .gallery-card img {
+    height: 180px;
+  }
+}
